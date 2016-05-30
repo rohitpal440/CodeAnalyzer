@@ -1,9 +1,6 @@
 function [cid med l ]=kmedoid(x,k,kdist)
 
 % K-medoid code is based on
-%Park,H.S, Jun,C.H, (2009). “A Simple and Fast Algorithm for K-Medoid
-%Clustering”, Expert System With Application 36. p 3336-3341.
-
 % Input:
 % x=data;
 % k=number of group
@@ -13,6 +10,9 @@ function [cid med l ]=kmedoid(x,k,kdist)
 %cid=index member group
 %med=medoid/center
 %l=number member in each group
+%
+%(c) by Team TechnoBell.com (Manas Chhabra && Rohit Pal)
+%
 
 n=size(x,1);
 if nargin < 2

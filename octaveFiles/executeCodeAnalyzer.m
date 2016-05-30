@@ -1,17 +1,16 @@
-load features.dat
-size(features)
-featuresT = feaures * features';
-featruesT
-sigma = featuresT/length(features)
+load features1.dat
+size(features1)
+sigma = (features1 * features1')/length(features1)
 size(sigma)
 [U,S,V] = svd (sigma);
 size (U)
 size (S)
-size (v)
+size (V)
 Ureduce = U(:,1:2);
 size (Ureduce)
 Ureduce
-cluster = Kmeans (Ureduce,4)
+k = input('Enter the value of k');
+cluster = Kmeans (Ureduce,k)
 X = Ureduce(:,1);
 size (X)
 X
@@ -24,3 +23,4 @@ size(Xcluster1);
 size(Ycluster1);
 [ Xcluster1, Ycluster1 ]
 plot(X,Y,'.',Xcluster1,Ycluster1,'or');
+pause(1000);
